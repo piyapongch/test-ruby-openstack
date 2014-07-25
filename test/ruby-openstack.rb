@@ -1,3 +1,4 @@
+# ruby openstack swift object-store testing
 require 'openstack'
 
 # open connection
