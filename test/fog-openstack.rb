@@ -10,10 +10,10 @@ service = Fog::Storage.new({
 })
 
 # get container
-service.directories.get "test"
+directory = service.directories.get "test"
 
 # upload file
-file = directory.files.create :key => 'test.jpg', :body => File.open "test.jpg", :etag
+file = directory.files.create :key => 'test.jpg', :body => File.open("test.jpg"), :etag => nil
 
 # download file
 File.open('downloaded-file.jpg', 'w') do | f |
