@@ -13,7 +13,7 @@ service = Fog::Storage.new({
 directory = service.directories.get "test"
 
 # upload file
-file = directory.files.create :key => "test.jpg", :body => File.open("test.jpg"), :etag => nil
+file = directory.files.create :key => "test.jpg", :body => File.open("test.jpg"), :metadata => {"file-name" => "test.jpg"}, :etag => nil
 
 # download file
 File.open("downloaded-file.jpg", "w") do | f |
@@ -24,5 +24,5 @@ end
 
 # print file metadata
 file = directory.files.get("test.jpg")
-pringf("metadata: %s\n", file.metadata)
+printf("metadata: %s\n", file.metadata_attributes)
 

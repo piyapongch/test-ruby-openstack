@@ -8,16 +8,19 @@ os = OpenStack::Connection.create({:username => "eraadmin", :api_key=>"r+p7vNH&T
 # get container
 printf("getting containner...\n")
 con = os.container("test")
-printf("test: %s\n", con.container_metadata)
-
-# create an object
-printf("creating an object...\n")
-obj = con.create_object("foo", {:metadata=>{"herpy"=>"derp"}, :content_type=>"text/plain"})
-printf("obj.data: %s\n", obj.data)
 
 # list object
 lst = con.objects
 printf("object list: %s\n", lst)
+printf("test: %s\n", con.container_metadata)
+
+test = con.object("test.jpg")
+printf("test: %s\n", test.object_metadata)
+
+# create an object
+printf("creating an object...\n")
+obj = con.create_object("foo", {:metadata=>{"herpy"=>"derp"}, :content_type=>"text/plain"}, File.open("test.jpg"))
+printf("obj.data: %s\n", obj.data)
 
 # update data
 foo = con.object("foo")
