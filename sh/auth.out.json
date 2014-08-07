@@ -1,0 +1,52 @@
+{
+	"access": {
+		"token": {
+			"issued_at": "2014-08-07T17:21:18.537328",
+			"expires": "2014-08-08T17:21:18Z",
+			"id": "MIIGMwYJKoZIhvcNAQcCoIIGJDCCBiACAQExCTAHBgUrDgMCGjCCBIkGCSqGSIb3DQEHAaCCBHoEggR2eyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wOC0wN1QxNzoyMToxOC41MzczMjgiLCAiZXhwaXJlcyI6ICIyMDE0LTA4LTA4VDE3OjIxOjE4WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkRlZmF1bHQgZGVtbyB0ZW5hbnQiLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICIyMjIyY2Q0NzE4YzA0NWNiODllNTBkYmVjMzRmNGRiMyIsICJuYW1lIjogImRlbW8ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly8xMjkuMTI4LjExOS4xODA6ODA4MC92MSIsICJyZWdpb24iOiAiRWRtb250b24iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovLzEyOS4xMjguMTE5LjE4MDo4MDgwL3YxL0FVVEhfMjIyMmNkNDcxOGMwNDVjYjg5ZTUwZGJlYzM0ZjRkYjMiLCAiaWQiOiAiYWQzMzdmOWJiMjdlNGE0NTg3ZWI5ZGQ5YjY1MzA0MGUiLCAicHVibGljVVJMIjogImh0dHA6Ly8xMjkuMTI4LjExOS4xODA6ODA4MC92MS9BVVRIXzIyMjJjZDQ3MThjMDQ1Y2I4OWU1MGRiZWMzNGY0ZGIzIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogIm9iamVjdC1zdG9yZSIsICJuYW1lIjogInN3aWZ0In0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovLzEyOS4xMjguMTE5LjE3OTozNTM1Ny92Mi4wIiwgInJlZ2lvbiI6ICJFZG1vbnRvbiIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vMTI5LjEyOC4xMTkuMTc5OjUwMDAvdjIuMCIsICJpZCI6ICIwZmUwMzU0ZTQ1OWY0OTQzYTJkMzlhYmFkMmExZTViOCIsICJwdWJsaWNVUkwiOiAiaHR0cDovLzEyOS4xMjguMTE5LjE3OTo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkbWluIiwgInJvbGVzX2xpbmtzIjogW10sICJpZCI6ICJkZjdjN2QyNDU0N2I0MGUzOWRmMmUwYzZmYmZjOThmOCIsICJyb2xlcyI6IFt7Im5hbWUiOiAiYWRtaW4ifV0sICJuYW1lIjogImFkbWluIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjcwN2E0OGFjYjZhYTQyNjU5YWIwMDhlOGNlNjVhNWE4Il19fX0xggGBMIIBfQIBATBcMFcxCzAJBgNVBAYTAlVTMQ4wDAYDVQQIDAVVbnNldDEOMAwGA1UEBwwFVW5zZXQxDjAMBgNVBAoMBVVuc2V0MRgwFgYDVQQDDA93d3cuZXhhbXBsZS5jb20CAQEwBwYFKw4DAhowDQYJKoZIhvcNAQEBBQAEggEAHj0qpIcG26fCC6th3zMTsOwKY3JZvLvMi9wBAfDYISwonKrUOm1f1FiMPBmjsLad2JRK6VsjzXsUvYzoAp-7nlf4xlSf5dDgHKPLcMjSxbIZb-PndoHFs4CCf4HCQlZWgDSvCbAGUOZpgdK-JLnv92Grzy39HH6fveCnW5K92-gEzvvgV7mQxSBVqA2t4tB5HyxyfeKGcW6IA-QopN4Fm3ov6EgeScuJDSPe0mc3Amu1prKG+ifsl0tmmJgLTQiwzkFUg-gBxt-sYUtWs-hMBtL2wWx-+7YzIGTKspBoiwl0aDZchv-AaW2nTT72AKZTuqVloda-y4LSveAJxMeXVw==",
+			"tenant": {
+				"description": "Default demo tenant",
+				"enabled": true,
+				"id": "2222cd4718c045cb89e50dbec34f4db3",
+				"name": "demo"
+			}
+		},
+		"serviceCatalog": [{
+			"endpoints": [{
+				"adminURL": "http://129.128.119.180:8080/v1",
+				"region": "Edmonton",
+				"internalURL": "http://129.128.119.180:8080/v1/AUTH_2222cd4718c045cb89e50dbec34f4db3",
+				"id": "ad337f9bb27e4a4587eb9dd9b653040e",
+				"publicURL": "http://129.128.119.180:8080/v1/AUTH_2222cd4718c045cb89e50dbec34f4db3"
+			}],
+			"endpoints_links": [],
+			"type": "object-store",
+			"name": "swift"
+		},
+		{
+			"endpoints": [{
+				"adminURL": "http://129.128.119.179:35357/v2.0",
+				"region": "Edmonton",
+				"internalURL": "http://129.128.119.179:5000/v2.0",
+				"id": "0fe0354e459f4943a2d39abad2a1e5b8",
+				"publicURL": "http://129.128.119.179:5000/v2.0"
+			}],
+			"endpoints_links": [],
+			"type": "identity",
+			"name": "keystone"
+		}],
+		"user": {
+			"username": "admin",
+			"roles_links": [],
+			"id": "df7c7d24547b40e39df2e0c6fbfc98f8",
+			"roles": [{
+				"name": "admin"
+			}],
+			"name": "admin"
+		},
+		"metadata": {
+			"is_admin": 0,
+			"roles": ["707a48acb6aa42659ab008e8ce65a5a8"]
+		}
+	}
+}
