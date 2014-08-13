@@ -1,7 +1,8 @@
 require "fog"
 require "yaml"
+require_relative "object_storage_base"
 
-class ObjectStorageClient
+class ObjectStorageClient < ObjectStorageBase
 
   def initialize()
 
@@ -37,8 +38,8 @@ class ObjectStorageClient
   end
   
   def delete_container(name)
-    directory = self.get_container(name)
-	directory.destroy
+    container = self.get_container(name)
+	container.destroy
   end    
   
   def create(container, name, file_path, metadata = nil)
@@ -62,28 +63,5 @@ class ObjectStorageClient
 	file = directory.files.get(name)
 	file.destroy
   end
+
 end
-
-# test client
-client = ObjectStorageClient.new()
-#printf("list: %s\n", client.list_container())
-#client.delete_container("test2")
-test = client.get_container("test")
-#client.download(test, "test.jpg", "download.jpg")
-file = test.files.get("test.jpg")
-file.copy("test", "test-copy.jpg")
-
-=begin
-metadata = {:owner => "Piyapong"}
-client.create(test, "test.jpg", "test.jpg")
-printf("list: %s\n", client.list_container("test"))
-obj = test.files.get("test.jpg")
-client.metadata(test, "test.jsp", metadata)
-obj.save
-obj.reload
-obj.metadata[:xxx2] = "Test2"
-obj.save
-obj.reload
-printf("obj.meta: %s\n", obj.metadata[:owner])
-printf("obj.attrs: %s\n", obj.attributes)
-=end
