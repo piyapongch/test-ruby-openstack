@@ -1,0 +1,7 @@
+development:
+  provider: "OpenStack"
+  username: "admin"
+  api_key: "PB4di@CamLib210b"
+  tenant: "demo"
+  auth_url: "http://129.128.119.179:5000/v2.0/tokens"
+  
