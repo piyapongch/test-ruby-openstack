@@ -5,7 +5,7 @@ require "yaml"
 os_config = YAML.load_file(File.join(__dir__, "openstack.yml"))
 config = os_config["development"]
 
-# load config from rails app config directory
+# load config from rails root config directory
 # os_config = File.join(Rails.root, 'config', 'openstack.yml')
 
 # create openstack swift service
@@ -33,7 +33,6 @@ file = directory.files.get("test.jpg")
 # list file
 #printf("file_list: %s\n", directory.files)
 
-
 # print file metadata
 printf("getting test.jpg object...\n")
 #file.metadata[:owner] = "Piyapong"
@@ -56,9 +55,9 @@ file = directory.files.create(:key => "test.jpg", :body => File.open("test.jpg")
 # download file
 printf("downloading test.jpg...\n")
 File.open("downloaded-file.jpg", "w") do | f |
-  directory.files.get("test.jpg") do | data, remaining, content_length |
-    f.syswrite data
-  end
+directory.files.get("test.jpg") do | data, remaining, content_length |
+f.syswrite data
+end
 end
 
 printf("before set meta1: %s\n", file.metadata[:meta1])
