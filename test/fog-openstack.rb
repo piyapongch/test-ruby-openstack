@@ -20,8 +20,10 @@ service = Fog::Storage.new({
 
 # create container
 printf("creating test container...\n")
-service.directories.create(:key => 'test')
+dir = service.directories.create(:key => 'test')
+puts("dir: #{dir.files}")
 
+=begin
 # list container
 printf("containers: %s\n", service.directories)
 
@@ -44,6 +46,7 @@ printf("metadata: %s\n", file.metadata[:owner])
 file = directory.files.get("test.jpg")
 file.metadata[:Owner] = "Piyapong"
 file.save
+=end
 
 =begin
 # upload file

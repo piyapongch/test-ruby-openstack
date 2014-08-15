@@ -1,6 +1,6 @@
+require_relative "object_storage_base"
 require "fog"
 require "yaml"
-require "object_storage_base"
 
 class ObjectStorageClient < ObjectStorageBase
   def initialize()
@@ -24,7 +24,7 @@ class ObjectStorageClient < ObjectStorageBase
   end
 
   def create_container(name, metadata = nil)
-    @service.directories.create(:key => name, :metadata => metadata)
+    return @service.directories.create(:key => name, :metadata => metadata)
   end
 
   def get_container(name)
@@ -43,6 +43,7 @@ class ObjectStorageClient < ObjectStorageBase
 
   def create(container, name, file_path, metadata = nil)
     file = container.files.create(:key => name, :body => File.open(file_path), :etag => nil, :metadata => metadata)
+    return file
   end
 
   def download(container, name, file_path)
@@ -54,13 +55,17 @@ class ObjectStorageClient < ObjectStorageBase
   end
 
   def update(container, name, file_path, metadata = nil)
-    self.create(container, name, file_path, metadata)
+    return self.create(container, name, file_path, metadata)
   end
 
   def delete(container, name)
     directory = service.directories.get(container)
     file = directory.files.get(name)
     file.destroy
+  end
+  
+  def destroy()
+    #TODO: implement this method
   end
 
 end
